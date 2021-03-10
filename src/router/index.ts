@@ -11,6 +11,11 @@ const routes: RouteRecordRaw[] = [
     name: 'About',
     component: () => import('../views/About'),
   },
+  {
+    path: '/weekly-report',
+    name: 'Weekly report',
+    component: () => import('../views/weekly-report'),
+  },
 ];
 
 const router = createRouter({

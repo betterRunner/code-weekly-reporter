@@ -10,6 +10,7 @@ export default defineComponent({
         <div id="nav">
           <RouterLink to="/">Home</RouterLink> |
           <RouterLink to="/about">About</RouterLink>
+          <RouterLink to="/weekly-report">Weekly Report</RouterLink>
         </div>
         <RouterView/>
       </>
