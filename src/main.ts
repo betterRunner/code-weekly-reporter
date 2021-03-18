@@ -6,7 +6,6 @@ import './index.css';
 import directiveMap from './directives/index';
 import router from './router';
 import store from './store';
-import '@/style/index.scss';
 
 const app = createApp(App);
 
