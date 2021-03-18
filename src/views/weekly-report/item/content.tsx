@@ -41,7 +41,7 @@ export default defineComponent({
           ></ElInput>
         ) : (
           <div onClick={handleEdit} class="flex">
-            <p class="ml-2">{props.title}</p>
+            <p class="">{props.title}</p>
           </div>
         )}
       </div>

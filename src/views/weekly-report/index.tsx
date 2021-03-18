@@ -10,18 +10,21 @@ export default defineComponent({
         id: 1,
         title: 'title1',
         progress: 10,
-        tags: ['低代码', '架构'],
+        codeLink: 'https://github.com/betterRunner/code-weekly-reporter.git',
+        tags: ['bff', 'SaaS'],
       },
       {
         id: 2,
         title: 'title2',
         progress: 20,
+        codeLink: '',
         tags: ['PaaS'],
       },
       {
         id: 3,
         title: 'title3',
         progress: 30,
+        codeLink: '',
         tags: ['SaaS'],
       },
     ];

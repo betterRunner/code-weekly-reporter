@@ -1,6 +1,7 @@
 import { defineComponent, nextTick, ref, PropType } from '@vue/runtime-core';
 import Content from './content';
 import Delete from './delete';
+import CodeLink from './code-link';
 import Tags from '@/components/tags';
 import type { Report } from '../../../types';
 
@@ -8,7 +9,7 @@ export default defineComponent({
   props: {
     index: {
       type: Number,
-      default: 1
+      default: 1,
     },
     report: {
       type: Object as PropType<Report>,
@@ -18,13 +19,17 @@ export default defineComponent({
   setup(props, { emit }) {
     const process = ref(0);
     const updateTitle = (title: string) => {
-      emit('update', { title: title, id: props.report.id })
-    }
+      emit('update', { title: title, id: props.report.id });
+    };
+    const updateCodeLink = (link: string) => {
+      emit('update', { codeLink: link, id: props.report.id });
+    };
 
     return () => (
       <li class="flex flex-col items-start pb-4 relative">
         <div class="absolute -left-2 z-10">{props.index}</div>
         <Content title={props.report.title} onUpdate={updateTitle}></Content>
+        <CodeLink link={props.report.codeLink} onUpdate={updateCodeLink}></CodeLink>
         <div class="flex flex-row items-center w-full">
           <ElSlider
             class="w-52 mx-3"
